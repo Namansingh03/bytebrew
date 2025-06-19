@@ -11,7 +11,7 @@ export const LogInButton = ({children} : {children : React.ReactNode}) => {
 
     const onClickAction = () => {
         console.log("logIn button clicked")
-        router.push("/auth/signIn")
+        router.push("/auth/sign-in")
     }
 
     return (
