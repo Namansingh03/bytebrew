@@ -1,5 +1,4 @@
 "use client"
-
 import { Button } from "@/components/ui/button"
 import React from 'react'
 import { LogInButton } from "./login-button"
@@ -11,11 +10,10 @@ function Navbar() {
         ByteBrew
      </h1>
      
-     <LogInButton>
-        <Button className="hover:bg-teal-600">
-        log-in
-     </Button>
-     </LogInButton>
+        <LogInButton>
+          <Button>Log in</Button>
+        </LogInButton>
+     
     </nav>
   )
 }
