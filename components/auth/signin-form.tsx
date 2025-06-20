@@ -22,7 +22,7 @@ export function SignInForm({
   );
   const router = useRouter();
 
-  const handleCredentialsSignIn = async (e: React.FormEvent) => {
+  const handleCredentialsSignIn = (e: React.FormEvent) => {
     e.preventDefault();
 
     startTransition(async () => {
@@ -42,6 +42,8 @@ export function SignInForm({
         password : fields.data.password,
         redirect: false,
       });
+
+      console.log("res : " , res)
 
       if (res?.error) {
         setErrors({ password: res.error });

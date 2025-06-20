@@ -48,3 +48,5 @@ export async function register(values: z.infer<typeof signUpSchema>) {
     return { error: "Something went wrong. Please try again." };
   }
 }
+
+
