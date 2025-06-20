@@ -6,14 +6,14 @@ import Github from "next-auth/providers/github";
 import prisma from "./db";
 import authConfig from "@/auth.config";
 
-export const {handlers , auth , signIn , signOut } = NextAuth({
-    callbacks: {
-      
-    },
-    adapter : PrismaAdapter(prisma),
-    session : { strategy : "jwt" },
-    ...authConfig,
-    pages: {
-        signIn : "/auth/sign-in"
-    }
+export const { handlers, auth, signIn, signOut } = NextAuth({
+  callbacks: {
+
+  },
+  // adapter : PrismaAdapter(prisma),
+  session: { strategy: "jwt" },
+  ...authConfig,
+  pages: {
+    signIn: "/auth/sign-in"
+  }
 })
